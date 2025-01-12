@@ -1,6 +1,9 @@
 " PLUGINS
 set modifiable
 
+" local plugins
+runtime myplugs/tabcomplete.vim
+
 " Plug auto-loading
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -12,7 +15,7 @@ endif
 call plug#begin()
 
 " fuzzy finder
-Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Asynchronus Lint Engine (for LSP)
 Plug 'dense-analysis/ale'

@@ -3,9 +3,13 @@
 let mapleader=" "
 let localleader=" "
 
+" system copy paste
+noremap <leader>y :silent w !wl-copy<cr>
+noremap <leader>p :read !wl-paste<cr>
+
 " Window creation/exit
-noremap <leader>h :vsplit<cr>
-noremap <leader>v :split<cr>
+noremap <leader>v :vsplit<cr>
+noremap <leader>h :split<cr>
 noremap <leader>w :q<cr>
 noremap <leader>q :q!<cr>
 
@@ -14,7 +18,7 @@ noremap <leader>th :set hlsearch!<cr>
 noremap <leader>tn :set relativenumber!<cr>
 
 " preserve buffer paste (super cool)
-xnoremap <leader>p "_dP
+xnoremap <leader>P "_dP
 
 " ==> VISUAL <==
 vnoremap J :m '>+1<cr>gv=gv
